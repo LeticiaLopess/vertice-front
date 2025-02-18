@@ -1,6 +1,13 @@
 {
-  "files": [],
-  "include": ["vite.config.*", "vitest.config.*", "tailwind.config.*"],
+  "files": ["src/global/types/vue-shim.d.ts"],
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "tailwind.config.*",
+    "src",
+    "src/global/types",
+    "env.d.ts"
+  ],
   "exclude": ["src/**/__tests__/*"],
   "references": [
     {
@@ -15,10 +22,13 @@
   ],
   "compilerOptions": {
     "composite": true,
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client", "tailwindcss"]
+    "types": ["vite/client", "tailwindcss", "vue"]
   }
 }

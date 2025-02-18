@@ -40,7 +40,7 @@ const buttonVariants = {
   secondary: 'bg-neutral-400/90 text-white hover:bg-neutral-400',
   danger: 'bg-red-500 text-white hover:bg-red-600',
   outline: 'border border-[#201E1E] text-[#201E1E]',
-  link: 'text-[#02A38C] hover:text-[#00AB74] hover:underline',
+  link: 'text-[#02A38C] hover:text-[#00AB74] hover:font-medium hover:underline',
 }
 
 const disabledClass = props.disabled ? 'opacity-50 cursor-not-allowed' : ''

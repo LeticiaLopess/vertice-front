@@ -3,8 +3,8 @@
     <input
       :id="id"
       :type="type"
-      :value="value"
-      @input="$emit('update:value', $event.target.value)"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
       :placeholder="placeholder"
       :class="[
         'px-3 py-2 border border-neutral-300 rounded-md focus:outline-none h-11 text-[#201E1E]',
@@ -21,7 +21,7 @@ import { defineProps, defineEmits } from 'vue'
 
 const props = defineProps({
   id: String,
-  value: String,
+  modelValue: String,
   label: String,
   type: {
     type: String,

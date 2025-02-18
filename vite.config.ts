@@ -7,21 +7,21 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    vueDevTools(),
-    tailwindcss(),
-    nodePolyfills({
-      include: ['crypto', 'url'],
-    }),
-  ],
-  css: {
-    postcss: {},
-  },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    plugins: [
+        vue(),
+        vueJsx(),
+        vueDevTools(),
+        tailwindcss(),
+        nodePolyfills({
+            include: ['crypto', 'url'],
+        }),
+    ],
+    css: {
+        postcss: {},
     },
-  },
+    resolve: {
+        alias: {
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
+        },
+    },
 })
