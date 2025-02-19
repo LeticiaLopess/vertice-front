@@ -22,7 +22,7 @@ export const login = async (loginData: { email: string; password: string }) => {
 
             const translations: Record<string, string> = {
                 'These credentials do not match our records.':
-                    'Credenciais inválidas, verifique email e senha.',
+                    'Credenciais inválidas, verifique seu email e senha.',
                 'The email field must be a valid email address.':
                     'O campo de e-mail deve ser um endereço válido.',
                 'The password field is required.': 'O campo de senha é obrigatório.',
