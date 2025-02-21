@@ -7,5 +7,3 @@ import './plugins/axios'
 <template>
     <RouterView />
 </template>
-
-<style scoped></style>

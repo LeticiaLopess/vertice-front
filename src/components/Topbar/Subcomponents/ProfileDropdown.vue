@@ -1,6 +1,10 @@
 <template>
   <div class="relative inline-block text-left">
-    <button @click="toggleMenu" class="flex items-center justify-center cursor-pointer w-8 h-8 rounded-full border border-[#152A46] bg-[#152A46] text-white font-bold">
+
+    <button
+      @click="toggleMenu"
+      class="flex items-center justify-center cursor-pointer w-8 h-8 rounded-full border border-[#152A46] bg-[#152A46] text-white font-bold"
+    >
       <template v-if="userImage">
         <img :src="userImage" alt="User Avatar" class="w-8 h-8 rounded-full" />
       </template>
@@ -9,7 +13,12 @@
       </template>
     </button>
 
-    <div v-if="isOpen" class="absolute right-0 mt-2 w-48 bg-white border border-neutral-200 rounded-lg shadow-sm z-50 transition-opacity duration-200 opacity-100">
+    <div
+      v-if="isOpen"
+      class="absolute right-0 mt-1 w-48 bg-white border border-neutral-200 rounded-lg shadow-sm z-50"
+      @mouseenter="isOpen = true"
+      @mouseleave="isOpen = false"
+    >
       <ul class="text-gray-700">
         <li><a href="#" class="text-sm block px-4 py-2 hover:bg-gray-100">Perfil</a></li>
         <li><a href="#" class="text-sm block px-4 py-2 hover:bg-gray-100">Configurações</a></li>
