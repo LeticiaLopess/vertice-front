@@ -3,7 +3,7 @@
 import { ref } from "vue";
 import { logout } from "@/api/auth/logout";
 import { useRouter } from 'vue-router';
-import { BookOpen, LibraryBig, LogOut, LayoutPanelLeft } from "lucide-vue-next";
+import { BookOpen, LibraryBig, LogOut, LayoutPanelLeft, NotebookPen } from "lucide-vue-next";
 import MenuButton from './Subcomponents/MenuButton.vue';
 
 const isExpanded = ref(false);
@@ -25,6 +25,7 @@ const router = useRouter()
       <MenuButton :isExpanded="isExpanded" :icon="LayoutPanelLeft" @click="router.push('/dashboard')">Início</MenuButton>
       <MenuButton :isExpanded="isExpanded" :icon="BookOpen" @click="router.push('/courses')">Cursos</MenuButton>
       <MenuButton :isExpanded="isExpanded" :icon="LibraryBig" @click="router.push('/questions')">Banco de Questões</MenuButton>
+      <MenuButton :isExpanded="isExpanded" :icon="NotebookPen" @click="router.push('/questionRegistration')">Cadastrar Questões</MenuButton>
     </div>
 
     <div class="flex flex-col text-white items-center">

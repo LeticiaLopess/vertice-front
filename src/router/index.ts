@@ -3,6 +3,7 @@ import Login from '../views/public/Login.vue'
 import Dashboard from '../views/private/Dashboard.vue'
 import Courses from '@/views/private/Courses.vue'
 import Questions from '@/views/private/Questions/Index.vue'
+import QuestionRegistration from '@/views/private/QuestionRegistration/Index.vue'
 import Layout from '@/views/private/Layout.vue'
 import { getIsAuthenticated } from '@/api/auth/getIsAuthenticated'
 
@@ -33,6 +34,11 @@ const router = createRouter({
                     path: '/questions',
                     name: 'questions',
                     component: Questions,
+                },
+                {
+                    path: '/questionRegistration',
+                    name: 'questionRegistration',
+                    component: QuestionRegistration,
                 },
             ],
         },
